@@ -8,6 +8,7 @@ module.exports = router
 router.get('/', (req, res) => {
   minions.isOnsite()
     .then((minonsOnSite) => {
+      console.log(minonsOnSite);
       res.render('fireChief', { name: 'minonsOnSite' })
     })
     .catch((err) => {
