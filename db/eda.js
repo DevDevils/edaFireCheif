@@ -15,6 +15,15 @@ function getMinions() {
 //check if onsite
 function isOnsite() {
   return knex('edaRegister')
-    .select('minons')
+    .select('name')
     .where('onsite', '=', '1')
+}
+
+
+
+//check if offsite
+function isOffsite() {
+  return knex('edaRegister')
+    .select('minions')
+    .where('onsite', '=', "0")
 }
