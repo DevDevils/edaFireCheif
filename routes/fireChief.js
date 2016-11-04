@@ -6,12 +6,17 @@ module.exports = router
 
 /* GET fireChief page. */
 router.get('/', (req, res) => {
-  minions.isOnsite()
-    .then((minionsOnSite) => {
-      console.log('minionsOnSite', minionsOnSite)
-      res.render('fireChief', {minionsOnSite: minionsOnSite})
+  minions.getMinions()
+  .then((minions) =>{
+    var minionsOnSite = minions.filter(function(minion){
+      return minion.onsite === 1
     })
-    .catch((err) => {
-      console.log(err)
+    var minionsOffSite = minions.filter(function(minion){
+      return minion.onsite === 0
     })
+    res.render('fireChief', {minionsOffSite, minionsOnSite})
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 })
