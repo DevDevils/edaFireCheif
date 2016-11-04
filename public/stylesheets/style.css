@@ -1,6 +1,5 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ffff33;
   text-align: center;
 }
@@ -16,7 +15,10 @@ h1 {
 }
 
 h3 {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Jura', sans-serif;
+  font-size: 40px;
+  /*font-variant: small-caps;*/
+  font-weight: bolder;
 }
 
 button {
@@ -31,4 +33,13 @@ button {
 
 button:hover {
   border: 5px solid #b30000;
+}
+
+ul {
+  border: 2px solid black;
+  width: 15%;
+  text-align: left;
+  font-family: 'Cousine', monospace;
+  font-size: 18px;
+  display: inline-grid;
 }
