@@ -4,7 +4,8 @@ var knex = Knex(knexConfig)
 
 module.exports = {
   getMinions,
-  isOnsite
+  isOnsite,
+  getOneMinion
 }
 
 //get all minions
@@ -15,11 +16,15 @@ function getMinions() {
 //check if onsite
 function isOnsite() {
   return knex('edaRegister')
-    .select('name')
+    .select()
     .where('onsite', '=', '1')
 }
 
-
+function getOneMinion(id) {
+  return knex('edaRegister')
+    .select()
+    .where('id', '=', id)
+}
 
 //check if offsite
 function isOffsite() {
