@@ -18,3 +18,12 @@ function isOnsite() {
     .select('minons')
     .where('onsite', '=', '1')
 }
+
+
+
+//check if offsite
+function isOffsite() {
+  return knex('edaRegister')
+    .select('minions')
+    .where('onsite', '=', "0")
+}
