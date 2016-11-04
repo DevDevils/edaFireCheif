@@ -12,6 +12,8 @@
 <button onclick = ''>Tag Out</button>
 
 <div class="safe">
-  <h3>SAFE</h3>
-  {{name}}
+<h3>SAFE</h3>
+  {{#each minionsOffSite}}
+    <p>{{name}}</p>
+  {{/each}}
 </div>
