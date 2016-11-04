@@ -17,7 +17,6 @@ h1 {
 h3 {
   font-family: 'Jura', sans-serif;
   font-size: 40px;
-  /*font-variant: small-caps;*/
   font-weight: bolder;
 }
 
@@ -42,4 +41,14 @@ ul {
   font-family: 'Cousine', monospace;
   font-size: 18px;
   display: inline-grid;
+}
+
+a {
+  color: black;
+  font-family: 'Cousine', monospace;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #700000;
 }
