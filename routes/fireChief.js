@@ -7,8 +7,9 @@ module.exports = router
 /* GET fireChief page. */
 router.get('/', (req, res) => {
   minions.isOnsite()
-    .then((minonsOnSite) => {
-      res.render('fireChief', { name: 'minonsOnSite' })
+    .then((minionsOnSite) => {
+      console.log('minionsOnSite', minionsOnSite)
+      res.render('fireChief', {minionsOnSite: minionsOnSite})
     })
     .catch((err) => {
       console.log(err)

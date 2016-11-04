@@ -2,7 +2,9 @@
 
 <h3>AT RISK</h3>
 <div class="atRisk">
-  {{name}}
+  {{#each minionsOnSite}}
+    <p>{{name}}</p>
+  {{/each}}
 </div>
 
 <!-- still need to put in what the button does -->
